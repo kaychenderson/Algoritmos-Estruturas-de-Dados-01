@@ -1,2 +1,2 @@
 # exercicios
-Exercícios realizados durante a aula prática 
+Exercícios realizados durante as aulas práticas. 
