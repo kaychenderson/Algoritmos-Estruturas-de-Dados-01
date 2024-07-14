@@ -17,6 +17,9 @@ informado pelo usuário. */
 #include <stdio.h>
 #include <math.h>
 
+// Protótipo:
+void calcs_pa_hex(float l, float *area, float *perimetro);
+
 void calcs_pa_hex(float l, float *area, float *perimetro) {
     *area = ((3*pow(l,2))*sqrt(3)/2);
     *perimetro = 6*l;
