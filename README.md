@@ -4,15 +4,15 @@ Bem-vindo(a) ao meu repositório da disciplina de Algoritmos e Estruturas de Dad
 
 ## Assuntos Abordados:
 
-## Unidade I
+### Unidade I
 
-### 1.1 Ponteiros
+#### 1.1 Ponteiros
 - Introdução aos Ponteiros
 - Manipulação de Ponteiros
 - Ponteiros e Arrays
 - Ponteiros para Ponteiros
 
-### 1.2 Alocação de Memória Dinâmica
+#### 1.2 Alocação de Memória Dinâmica
 - Introdução à Alocação de Memória Dinâmica
 - Funções malloc, calloc, realloc e free
 - Gerenciamento de Memória Dinâmica
