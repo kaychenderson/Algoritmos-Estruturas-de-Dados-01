@@ -7,9 +7,15 @@ aleatórios entre 1 e 100, e em seguida, exiba a matriz resultante. */
 #include <time.h>
 
 int main() {
+    
     int num;
+
     printf("Digite um numero inteiro positivo: ");
     scanf("%d", &num);
+
+    if (num <= 0) {
+        printf("Ops, o número informado é invalido. Tente novamente.\n");
+    }
 
     while (num < 0) {
         printf("Digite um numero inteiro positivo: ");
