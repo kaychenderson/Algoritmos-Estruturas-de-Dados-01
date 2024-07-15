@@ -1,3 +1,24 @@
+/* Você foi contratado para desenvolver um programa em C que permita armazenar nomes completos e idades 
+de várias pessoas. O programa deve solicitar ao usuário o número de pessoas e, em seguida, permitir que 
+ele digite o nome completo e a idade de cada pessoa.
+
+Seu programa deve alocar memória dinamicamente para armazenar os nomes em uma matriz de strings, 
+enquanto as idades devem ser armazenadas em um vetor. Após a entrada de todos os nomes e idades, 
+o programa deve exibir os nomes armazenados.
+
+Aqui estão as especificações do programa:
+
+- O programa deve começar solicitando ao usuário o número de pessoas que deseja armazenar.
+- Em seguida, o programa deve pedir ao usuário que digite o nome completo de cada pessoa.
+- Os nomes devem ser armazenados em uma matriz alocada dinamicamente.
+- Após o nome, o programa deve solicitar a idade da pessoa.
+- As idades devem ser armazenadas em um vetor alocado dinamicamente.
+- Após a entrada de todos os nomes e idades, o programa deve exibir os nomes armazenados.
+- Certifique-se de tratar adequadamente a alocação dinâmica de memória e liberar a memória alocada 
+corretamente após o uso.
+
+Observação: O programa deve ser capaz de armazenar até 100 nomes completos. */
+
 #include <stdio.h>
 #include <stdlib.h>
 
