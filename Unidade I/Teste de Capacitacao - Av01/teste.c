@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 typedef union documento {
-    char rg[12];
-    char cpf[12];
-    char sus[12];
-    char passaporte[12];
+    char rg[15];
+    char cpf[15];
+    char sus[15];
+    char passaporte[15];
 } Documento;
 
 typedef enum genero {
@@ -95,7 +95,9 @@ void atualiza (Pessoa * pessoa) {
 }
 
 int main(void) {
+    
     Pessoa p;
+
     preenche(&p);
     imprime(&p);
     atualiza(&p);
