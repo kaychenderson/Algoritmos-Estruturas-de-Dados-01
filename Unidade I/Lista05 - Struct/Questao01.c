@@ -34,7 +34,7 @@ void altSalario(Funcionario funcionarios[], int tamanho, int id, float novoSalar
             printf("O salário do funcionário: %s - (ID: %d) foi alterado com sucesso para: %.2f\n", funcionarios[index].nome, id, novoSalario);
         }
     }
-    printf("Funcionário ID informado não encontrado.\n");
+    printf("Funcionário com o ID informado não encontrado.\n");
 }
 
 void imprimirMaiorMenorSalario(Funcionario funcionarios[], int tamanho) {

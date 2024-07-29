@@ -5,6 +5,18 @@ os elementos do vetor e, por fim, imprima os elementos na ordem inversa. */
 #include <stdio.h>
 #include <stdlib.h>
 
+int * alocaVetor(int size){
+    int * vetor = (int *) malloc(size*sizeof(int));
+
+    if (vetor == NULL){
+        printf("No memory!");
+    } else {
+        printf("Vetor Alocado com sucesso!");
+    }
+
+    return vetor;
+}
+
 void preencheVetor (int size, int *vator){
     printf("Digite os elementos do vetor: \n");
     for(int count = 0; count < size; count++){
@@ -17,18 +29,6 @@ void imprimeVetor (int size, int *vetor){
     for(int count = size-1; count >= 0; count--){
         printf("%d \t", vetor[count]);
     }
-}
-
-int * alocaVetor(int sieze){
-    int * vetor = (int *) malloc(size*sizeof(int));
-
-    if (vetor == NULL){
-        printf("No memory!");
-    } else {
-        printf("Vetor Alocado com sucesso!");
-    }
-
-    return vetor;
 }
 
 int main(void){
