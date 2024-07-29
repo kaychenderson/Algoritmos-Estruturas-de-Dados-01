@@ -21,7 +21,7 @@ typedef struct data {
     int ano;
 } Data;
 
-void preenche(Data * data) {
+void preenche(Data *data) {
     do {
         printf("Informe o dia (1 - 31): \n");
         scanf("%d", &data->dia);
@@ -58,7 +58,7 @@ void preenche(Data * data) {
     scanf("%d", &data->ano);
 }
 
-void imprime(Data * data) {
+void imprime(Data *data) {
     printf("Dados informados: \n");
     printf("Data: %02d/%02d/%04d\n", data->dia, data->mes, data->ano);
 }

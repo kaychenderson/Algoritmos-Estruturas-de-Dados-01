@@ -23,7 +23,7 @@ typedef struct pessoa {
     int tipoDoc; // 1 para RG, 2 para CPF, 3 para SUS, 4 para Passaporte
 } Pessoa;
 
-void preenche (Pessoa * pessoa) {
+void preenche (Pessoa *pessoa) {
     printf("Informe o nome: \n");
     scanf(" %[^\n]s", pessoa->nome);
 
@@ -56,10 +56,10 @@ void preenche (Pessoa * pessoa) {
     scanf("%d", &pessoa->idade);
 
     printf("Informe o seu genero: (1- MASCULINO, 2- FEMININO, 3- NEUTRO, 4- OUTRO)\n");
-    scanf("%d", (int *)&pessoa->genero);
+    scanf("%d", &pessoa->genero);
 }
 
-void imprime (Pessoa * pessoa) {
+void imprime (Pessoa *pessoa) {
     printf("Nome: %s \n", pessoa->nome);
 
     switch (pessoa->tipoDoc) {
@@ -87,7 +87,7 @@ void imprime (Pessoa * pessoa) {
         pessoa->genero == NEUTRO ? "NEUTRO" : "OUTRO");
 }
 
-void atualiza (Pessoa * pessoa) {
+void atualiza (Pessoa *pessoa) {
     int nvIdade;
     printf("Informe a nova idade: \n");
     scanf("%d", &nvIdade);

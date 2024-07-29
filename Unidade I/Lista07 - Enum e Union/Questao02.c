@@ -12,7 +12,7 @@ typedef struct produto {
     Tipo tipo;
 } Produto;
 
-void preenche(Produto * produto) {
+void preenche(Produto *produto) {
     printf("Digite o nome do Produto: \n");
     scanf(" %[^\n]", produto->nome);
 
@@ -24,7 +24,7 @@ void preenche(Produto * produto) {
     scanf("%d", &produto->tipo);
 }
 
-void imprime(Produto * produto) {
+void imprime(Produto *produto) {
     printf("\nDados do Produto: \n");
     printf("Nome: %s\n", produto->nome);
     printf("Idade: %.2f\n", produto->preco);

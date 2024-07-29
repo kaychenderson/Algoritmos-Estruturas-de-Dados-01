@@ -13,7 +13,7 @@ typedef struct pessoa {
     Genero genero;
 } Pessoa;
 
-void preenche(Pessoa * pessoa) {
+void preenche(Pessoa *pessoa) {
     printf("Digite o nome: ");
     scanf(" %[^\n]", pessoa->nome);
 
@@ -25,7 +25,7 @@ void preenche(Pessoa * pessoa) {
     scanf("%d", &pessoa->genero);
 }
 
-void imprime(Pessoa * pessoa) {
+void imprime(Pessoa *pessoa) {
     printf("\nDados da Pessoa:\n");
     printf("Nome: %s\n", pessoa->nome);
     printf("Idade: %d\n", pessoa->idade);
