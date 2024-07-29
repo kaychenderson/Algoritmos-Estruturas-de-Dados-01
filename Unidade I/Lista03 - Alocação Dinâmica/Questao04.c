@@ -68,7 +68,7 @@ int main() {
         }
 
         printf("Digite o nome completo: ");
-        scanf(" %[^\n]", nomes[count]); // Lerá o nome completo com os espaços
+        scanf(" %[^\n]", nomes[count]); // Lerá a string completa com os espaços at
 
         printf("Digite a idade: ");
         scanf("%d", &idades[count]);
