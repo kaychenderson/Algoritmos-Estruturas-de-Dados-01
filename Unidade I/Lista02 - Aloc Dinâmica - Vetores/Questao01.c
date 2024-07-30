@@ -19,22 +19,22 @@ int main() {
     printf("Informe o número de pessoas que foram entrevistadas: ");
     scanf("%d", &num);
 
-    char *sexo = (char *)malloc(num*sizeof(char));
-    char *opn = (char *)malloc(num*sizeof(char));
+    char *sexo = (char *)malloc(num * sizeof(char));
+    char *opn = (char *)malloc(num * sizeof(char));
 
     for (int index = 0; index < num; index++) {
         printf("Informe o sexo da pessoa - (M / F): ");
-        scanf("%c", &sexo[index]);
+        scanf(" %c", &sexo[index]); 
         if (sexo[index] != 'M' && sexo[index] != 'F' && sexo[index] != 'm' && sexo[index] != 'f') {
             printf("Opção inválida. Por favor, tente novamente. \n");
             index--; 
             continue; 
         }
         printf("Informe a opinião da pessoa - (S / N): ");
-        scanf("%c", &opn[index]);
+        scanf(" %c", &opn[index]); 
         if (opn[index] != 'S' && opn[index] != 'N' && opn[index] != 's' && opn[index] != 'n') {
-            printf("Opção inválida, Por favor, tente novamente. \n");
-            index--; // Decrementa o índice para tentar novamente
+            printf("Opção inválida. Por favor, tente novamente. \n");
+            index--; 
         }
     }
 
@@ -53,23 +53,22 @@ int main() {
         }
     }
 
-    double percentFgostou;
+    float percentFgostou;
     if (feminino > 0) {
-        percentFgostou = (double)femininoS / feminino * 100;
+        percentFgostou = (float)femininoS / feminino * 100;
     } else {
         percentFgostou = 0;
     }
 
-    double percentMnaoGostou;
+    float percentMnaoGostou;
     if (masculino > 0) {
-        percentMnaoGostou = (double)masculinoN / masculino * 100;
+        percentMnaoGostou = (float)masculinoN / masculino * 100;
     } else {
         percentMnaoGostou = 0;
     }
 
     printf("%.2f%% das Mulheres gostaram do Produto.\n", percentFgostou);
     printf("%.2f%% dos Homens não gostaram do Produto.\n", percentMnaoGostou);
-    // %.2 = Imprimirá duas casas decimais após a virgula.    |    %% = Imprimirá o "%".
 
     free(sexo);
     free(opn);
