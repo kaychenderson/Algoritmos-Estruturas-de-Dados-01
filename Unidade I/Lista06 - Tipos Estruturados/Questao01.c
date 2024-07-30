@@ -206,3 +206,44 @@ int main() {
 
     return 0;
 }
+
+/* Questão 1) Escreva um programa em C que manipula dados dos alunos da disciplina de
+Algoritmos e Estruturas de Dados I da UFERSA Pau dos Ferros. Seu programa deverá utilizar os
+tipos estruturados e o vetor definidos a seguir:
+struct aluno {
+ int mat;
+ char nome[81];
+ float notas[3];
+ float media;
+};
+typedef struct aluno Aluno;
+struct turma {
+ char id; // caractere que identifica a turma, por exemplo, A ou B 
+ int vagas; // números de vagas disponíveis para fechar a turma 
+ Aluno* alunos[MAX_VAGAS];
+};
+typedef struct turma Turma;
+Turma* turmas[MAX_TURMAS];
+Deve-se levar em consideração que é ofertado um número máximo de turmas (definido pela
+constante simbólica MAX_TURMAS) e um número máximo de vagas para cada turma (definido
+pela constante simbólica MAX_VAGAS). Sabendo dessas informações, faça o que se pede nos
+itens a seguir: 
+a) Implemente uma função que cria uma turma, fornecendo-lhe um identificador.
+Essa função deve ser responsável por indicar que a turma não tem alunos
+matriculados, atribuindo a constante NULL a cada um dos elementos do vetor de
+ponteiros.
+Protótipo: Turma* cria_turma(char id);
+b) Implemente uma função que recebe os dados de um aluno e o matricula em uma
+das turmas, caso haja vaga disponível. Inicialize suas notas com zero.
+Protótipo: void matricula_aluno(Turma* turma, int mat, char* nome);
+c) Implemente uma função que lança as notas e calcula a média dos alunos de uma
+determinada turma.
+Protótipo: void lanca_notas(Turma* turma);
+d) Implemente uma função que imprime os dados de todos os alunos de uma turma.
+Protótipo: void imprime_alunos(Turma* turma);
+e) Implemente uma função que imprime os dados de todas as turmas.
+Protótipo: void imprime_turmas(Turma** turmas, int n);
+f) Implemente uma função para procurar uma turma.
+Protótipo: Turma* procura_turma(Turma** turmas, int n, char id);
+OBS.: Forneça um menu de interação com o usuário, tomando como base o exemplo de
+execução a seguir (o texto em negrito representa a entrada do usuário): */

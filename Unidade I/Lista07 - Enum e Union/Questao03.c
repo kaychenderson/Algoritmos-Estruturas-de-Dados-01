@@ -1,4 +1,9 @@
-include <stdio.h>
+/* Questão 3: Escreva um programa que implementa uma struct Data com os campos dia, mes e ano. O mes deve
+ser armazenado como um enum com os valores JANEIRO, FEVEREIRO, MARC¸ O, ABRIL, MAIO,
+JUNHO, JULHO, AGOSTO, SETEMBRO, OUTUBRO, NOVEMBRO e DEZEMBRO. O programa
+deve ler a data e imprimir a data no formato dd/mm/aaaa */
+
+#include <stdio.h>
 
 typedef enum meses {
     JANEIRO = 1,

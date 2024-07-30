@@ -1,3 +1,7 @@
+/* Questão 01: Escreva um programa que implementa uma struct Pessoa com os campos nome, idade e genero. O
+genero deve ser armazenado como um enum com os valores MASCULINO e FEMININO. O programa
+deve ler os dados de uma pessoa e imprimir os dados da pessoa. */
+
 #include <stdio.h>
 
 typedef enum genero {
