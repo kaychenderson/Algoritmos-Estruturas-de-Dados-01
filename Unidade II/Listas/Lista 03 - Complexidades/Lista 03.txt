@@ -1,0 +1,156 @@
+// Questão 01:
+int soma_numeros(int n) {
+    int soma = 0; // C1 = 1 vez
+    for (int i = 1; i <= n; i++) { // C2 = (n) vezes
+        soma += i; // C3 = (n) vezes
+    }
+    return soma; // C4= 1 vez
+}
+
+/* 
+T(n) = C1 + C2n + C3n +C4
+T(n) = n(C2+C3) + (C1+C4)
+T(n) = n(a) + (b)
+
+1. T(n) = n(a)   //Remover as constantes
+2. T(n) = n      //Remover as constantes multiplicativas
+3. T(n) =        //Remover termos de menor grau (X)
+
+Notação Big O : O(n)
+*/
+
+/*---------------------------------------------------------------------------------*/
+
+//Questão 02 - ALGORITMO 'A':
+void algoritmo_a(int n) {
+    for (int i = 0; i < n; i++) { // C1 = (n) vezes
+        for (int j = 0; j < n; j++) { // C2 = (n^2) vezes
+            printf("%d, %d\n", i, j); // C3 = (n^2) vezes
+        }
+    }
+}
+
+/*
+T(n) = C1n + C2(n^2) + C3(n^2)
+T(n) = n^2(C2+C3) + n(C1)
+T(n) = n^2(a) + n(b)
+
+1. T(n) =               //Remover as constantes (X)
+2. T(n) = n^2 + n       //Remover as constantes multiplicativas
+3. T(n) = n^2           //Remover termos de menor grau
+
+Notação Big O: O(n^2)
+*/
+
+//Questão 02 - ALGORITMO 'B':
+void algoritmo_b(int n) {
+    for (int i = 0; i < n; i++) { // C1 = (n) vezes
+        printf("%d\n", i); // C2 = (n) vezes
+    }
+
+    for (int j = 0; j < n; j++) { // C3 = (n) vezes
+        printf("%d\n", j); // C4 = (n) vezes
+    }
+}
+
+/*
+T(n) = C1n + C2n + C3n + C4n
+T(n) = n(C1+C2+C3+C4)
+T(n) = n(a)
+
+1. T(n) =         //Remover as constantes (X)
+2. T(n) = n       //Remover as constantes multiplicátivas
+3. T(n) =         //Remover termos de menor grau (X)
+
+Notação Big O: O(n)
+*/
+
+/* Justificativa: O algoritmo 'B' é o mais eficiente em termos de complexidade, 
+pois é do tipo linear. |   O(n^2) vs O(n)   | */
+
+/*---------------------------------------------------------------------------------*/
+
+//Questão 03:
+int soma(int arr[], int n) {
+    int soma = 0; // C1 = 1 vez
+    for (int i = 0; i < n; i++) { // C2 = (n) vezes
+        soma += arr[i]; // C3 = (n) vezes
+    }
+    return soma; // C4 = 1 vez
+}
+
+/* O algoritmo utiliza um número fixo de variáveis (a variável soma e a variável de controle i), independentemente do tamanho da entrada n. Portanto, não há consumo adicional de memória proporcional a n, 
+o que resulta em complexidade espacial constante. */
+
+/*
+Notação Big O: O(1).
+*/
+
+/*---------------------------------------------------------------------------------*/
+
+//Questão 04:
+int busca_linear(int arr[], int n, int x) {
+    for (int i = 0; i < n; i++) { // C1 = (n) vezes
+        if (arr[i] == x) {  // C2 = (n) vezes
+            return i; // C3 = (n) vezes
+        }
+    }
+    return -1; // C4 = 1 Vez
+}
+
+/*
+PIOR CASO:
+T(n) = C1n + C2n + C3n + C4
+T(n) = n(C1+C2+C3) + C4
+T(n) = n(a) + (b)
+
+1. T(n) = n(a)    //Remover as constantes
+2. T(n) = n       //Remover as constantes multiplicátivas
+3. T(n) =         //Remover termos de menor grau (X)
+
+Notação Big O: O(n)
+*/
+
+/*
+A busca binária, em um array ordenado, tem uma complexidade de tempo de O(log n).
+Portanto, a busca linear é menos eficiente que a busca binária, 
+especialmente em grandes conjuntos de dados.
+*/
+
+/*---------------------------------------------------------------------------------*/
+
+//Questão 05:
+void selection_sort(int arr[], int n) {
+    int i, j, min_idx;
+    for (i = 0; i < n-1; i++) {          // C1 = (n-1) vezes
+        min_idx = i;
+        for (j = i+1; j < n; j++) {      // C2 = (n-i) vezes
+            if (arr[j] < arr[min_idx]) { // C3 = (n-i) vezes
+                min_idx = j;             // C4 = (n-i) vezes
+            }
+        }
+        int temp = arr[min_idx];
+        arr[min_idx] = arr[i];
+        arr[i] = temp;                   // C5 = 1 vez
+    }
+}
+
+/*
+C2+C3+C4 = (n−1)+(n−2)+(n−3)+...+1 = ((n−1)n) / 2
+
+T(n) = C1 + (C2+C3+C4) + C5
+T(n) = (n-1) + ((n−1)n) / 2 + (n-1)
+T(n) = 2(n-1) + ((n−1)n)
+T(n) = (n-1) * (2 + (n/2))
+
+1. T(n) =                           //Remover as constantes (X)
+2. T(n) = T(n) = (n^2/2) - (n/2)    //Remover as constantes multiplicátivas
+3. T(n) = n^2                       //Remover termos de menor grau 
+
+Notação Big O: O(n^2)
+*/
+
+/*
+Sim, existem algoritmos de ordenação mais eficientes, como: 
+o QuickSort e o MergeSort, que têm complexidade média de O(n logn).
+*/
