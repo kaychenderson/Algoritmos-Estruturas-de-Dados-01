@@ -4,47 +4,47 @@
 #include "contaBanc.h"
 
 struct ContaBancaria{
-    char titular[20];
+    char titular[50];
     int numero;
-    float saldo;
+    float saldo;    
 };
 
-ContaBancaria *criarConta (char* titular, float saldo, int numero){
-
-    ContaBancaria *conta = (ContaBancaria*) malloc(sizeof(ContaBancaria));
-    if (conta == NULL){
-        printf("No memory. \n");
+ContaBancaria *criarConta(char* titular, int numero, float saldo){
+    ContaBancaria *conta = (ContaBancaria*)malloc(sizeof(ContaBancaria));
+    if(conta==NULL){
+        printf("Erro ao alocar memoria.\n");
         exit(1);
     } else {
-        printf("Conta Bancária Alocada! \n");
+        printf("Memoria alocada com sucesso.\n");
     }
-    //Inicializar conta
+
     conta->numero = numero;
     conta->saldo = saldo;
-    strcpy(conta->titular, titular); //Copia a string titular para conta->titular
+    strcpy(conta->titular, titular);
 
-    return conta; 
+    return conta;
 }
 
 void depositar(ContaBancaria* conta, float dinheiro){
-    conta->saldo = conta->saldo+dinheiro;
+    conta->saldo = conta->saldo + dinheiro;
     printf("Valor depositado com sucesso.\n");
-    printf("Novo Saldo: %.2f \n", conta->saldo);
+    printf("Novo saldo (pos-deposito): %.2f\n", conta->saldo);
 }
 
 void sacar(ContaBancaria* conta, float valor){
-    if(conta->saldo >= valor){
+    if (conta->saldo >= valor){
         conta->saldo = conta->saldo - valor;
-        printf("Valor sacado com sucesso. \n");
+        printf("Valor sacado com sucesso.\n");
+        printf("Novo saldo (pos-saque): %.2f\n", conta->saldo);
     } else {
-        printf("O valor é insuficiente. \n");
+        printf("Valor insuficinte.\n");
     }
 }
 
 float saldo(ContaBancaria* conta){
-    return conta->saldo;
+    printf("Saldo final: %.2f", &conta->saldo);
 }
 
-void excluirConta(ContaBancaria* conta){
+void excluir(ContaBancaria* conta){
     free(conta);
 }
