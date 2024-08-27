@@ -1,0 +1,3 @@
+Menor: 1
+Maior: 19
+Média: 7.90
