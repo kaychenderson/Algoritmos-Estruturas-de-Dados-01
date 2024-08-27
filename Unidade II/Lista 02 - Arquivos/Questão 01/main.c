@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int main() {
+
     FILE *arq_entrada, *arq_saida;
     char nome[100];
     float nota1, nota2, nota3, media;
@@ -11,11 +12,11 @@ int main() {
 
     if (arq_entrada == NULL || arq_saida == NULL) {
         printf("Erro ao abrir os arquivos!\n");
-        return 1;
+        exit(1);
     }
 
     while (fscanf(arq_entrada, "%s\t%f\t%f\t%f", nome, &nota1, &nota2, &nota3) != EOF) {
-        media = (nota1 + nota2 + nota3) / 3.0;
+        media = (nota1 + nota2 + nota3) / 3;
         fprintf(arq_saida, "%s\t%.2f\t%s\n", nome, media, (media >= 7.0) ? "Aprovado" : "Reprovado");
     }
 

@@ -79,8 +79,9 @@ int soma(int arr[], int n) {
     return soma; // C4 = 1 vez
 }
 
-/* O algoritmo utiliza um número fixo de variáveis (a variável soma e a variável de controle i), independentemente do tamanho da entrada n. Portanto, não há consumo adicional de memória proporcional a n, 
-o que resulta em complexidade espacial constante. */
+/* O algoritmo utiliza um número fixo de variáveis (a variável soma e a variável de controle i), 
+independentemente do tamanho da entrada n. Portanto, não há consumo adicional de memória 
+proporcional a n, o que resulta em complexidade espacial constante. */
 
 /*
 Notação Big O: O(1).
