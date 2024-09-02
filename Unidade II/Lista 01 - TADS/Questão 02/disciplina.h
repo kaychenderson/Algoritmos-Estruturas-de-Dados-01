@@ -1,3 +1,5 @@
+/* Arquivo cabeçalho para Tipos Abstrados de Dados - (TAD's) Disciplina */
+
 #ifndef DISCIPLINA_H
 #define DISCIPLINA_H
 
@@ -6,10 +8,17 @@ typedef struct {
     int codigo;
 } Disciplina;
 
-// Função que cria uma disciplina
+/* Função que aloca dinamicamente na memória uma struct Disciplina e retorna seu endereço. 
+Parâmetros:
+    - char* nome: Nome da disciplina.
+    - int codigo: Código da disciplina.
+*/
 Disciplina* criarDisciplina(char nome[], int codigo);
 
-// Função que exclui uma disciplina
+/* Função que libera o espaço alocado dinamicamente para a estrutura Disciplina. 
+Parâmetros:
+    - Disciplina* disciplina: Representa a disciplina a ser excluída.
+*/
 void excluirDisciplina(Disciplina* disciplina);
 
-#endif
+#endif 
