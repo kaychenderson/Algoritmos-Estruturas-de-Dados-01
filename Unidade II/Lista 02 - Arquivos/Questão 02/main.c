@@ -3,7 +3,7 @@
 
 int main() {
     FILE *arq_entrada, *arq_saida;
-    int vetor[10], i, maior, menor;
+    int vetor[10], index, maior, menor;
     float media, soma = 0;
 
     arq_entrada = fopen("entrada_q2.txt", "r");
@@ -14,15 +14,15 @@ int main() {
         exit(1);
     }
 
-    for (i = 0; i < 10; i++) {
-        fscanf(arq_entrada, "%d", &vetor[i]);
-        soma = soma + vetor[i];
+    for (index = 0; index < 10; index++) {
+        fscanf(arq_entrada, "%d", &vetor[index]);
+        soma = soma + vetor[index];
 
-        if (i == 0) {
-            maior = menor = vetor[i];
+        if (index == 0) {
+            maior = menor = vetor[index];
         } else {
-            if (vetor[i] > maior) maior = vetor[i];
-            if (vetor[i] < menor) menor = vetor[i];
+            if (vetor[index] > maior) maior = vetor[index];
+            if (vetor[index] < menor) menor = vetor[index];
         }
     }
 

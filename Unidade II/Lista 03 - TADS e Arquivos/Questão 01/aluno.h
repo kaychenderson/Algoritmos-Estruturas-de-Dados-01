@@ -8,8 +8,3 @@ void salvarAlunoEmArquivo(char nome_arquivo[], Aluno* aluno);
 
 // Função para exibir todos os alunos cadastrados em um arquivo
 void exibirAlunos(char nome_arquivo[]);
-
-
-
-//   gcc main.c aluno.c -o main
-//   ./main

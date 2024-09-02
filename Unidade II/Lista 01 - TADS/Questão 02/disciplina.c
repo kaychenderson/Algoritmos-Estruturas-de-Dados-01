@@ -4,16 +4,16 @@
 #include "disciplina.h"
 
 // Implementação da função que cria uma disciplina
-Disciplina* cria_disciplina(char nome[], int codigo) {
-    Disciplina* nova_disciplina = (Disciplina*) malloc(sizeof(Disciplina));
-    if (nova_disciplina != NULL) {
-        strcpy(nova_disciplina->nome, nome);
-        nova_disciplina->codigo = codigo;
+Disciplina* criarDisciplina(char nome[], int codigo) {
+    Disciplina* novaDisciplina = (Disciplina*) malloc(sizeof(Disciplina));
+    if (novaDisciplina != NULL) {
+        strcpy(novaDisciplina->nome, nome);
+        novaDisciplina->codigo = codigo;
     }
-    return nova_disciplina;
+    return novaDisciplina;
 }
 
 // Implementação da função que exclui uma disciplina
-void exclui_disciplina(Disciplina* disciplina) {
+void excluirDisciplina(Disciplina* disciplina) {
     free(disciplina);
 }

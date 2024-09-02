@@ -37,3 +37,6 @@ int main(void) {
 
     return 0;
 }
+
+//    gcc main.c produto.c -o main
+//    ./main

@@ -7,9 +7,9 @@ typedef struct {
 } Disciplina;
 
 // Função que cria uma disciplina
-Disciplina* cria_disciplina(char nome[], int codigo);
+Disciplina* criarDisciplina(char nome[], int codigo);
 
 // Função que exclui uma disciplina
-void exclui_disciplina(Disciplina* disciplina);
+void excluirDisciplina(Disciplina* disciplina);
 
 #endif

@@ -23,3 +23,6 @@ int main(void) {
 
     return 0;
 }
+
+//   gcc main.c aluno.c -o main
+//   ./main

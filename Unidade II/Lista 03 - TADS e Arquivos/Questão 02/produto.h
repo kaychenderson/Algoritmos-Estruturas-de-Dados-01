@@ -14,7 +14,3 @@ void atualizarQuantidadeProduto(char nome_arquivo[], int codigo, int nova_quanti
 
 // Função para exibir todos os produtos no estoque
 void exibirEstoque(char nome_arquivo[]);
-
-
-//    gcc main.c produto.c -o main
-//    ./main

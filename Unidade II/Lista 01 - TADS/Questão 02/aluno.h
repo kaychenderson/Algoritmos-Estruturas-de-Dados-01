@@ -1,6 +1,3 @@
-#ifndef ALUNO_H
-#define ALUNO_H
-
 #include "disciplina.h"
 
 typedef struct {
@@ -11,12 +8,10 @@ typedef struct {
 } Aluno;
 
 // Função que cria um aluno
-Aluno* cria_aluno(char nome[], int matricula);
+Aluno* criarAluno(char nome[], int matricula);
 
 // Função que matricula um aluno em uma disciplina
-void matricula_disciplina(Aluno* aluno, Disciplina* disciplina);
+void matricularAlunoDisciplina(Aluno* aluno, Disciplina* disciplina);
 
 // Função que exclui um aluno
-void exclui_aluno(Aluno* aluno);
-
-#endif
+void excluirAluno(Aluno* aluno);
