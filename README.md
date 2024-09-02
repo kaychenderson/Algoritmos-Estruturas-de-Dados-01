@@ -57,4 +57,5 @@ Bem-vindo(a) ao meu repositório da disciplina de Algoritmos e Estruturas de Dad
 - Introdução à Complexidade de Algoritmos
 - Notação Big-O
 - Análise de Complexidade de Algoritmos
-- Casos Pior, Médio e Melhor
+- Complexidade de Tempo e Espaço
+- Casos: Pior, Médio e Melhor
