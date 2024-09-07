@@ -23,8 +23,9 @@ No* inserirInt(No* lista, int numero){
 void imprimirInt(No* lista){
     No* index;
     for(index = lista; index != NULL; index=index->prox){
-        printf("%d", index->info);
+        printf("%d ", index->info); // Adicionando espaço para melhor formatação
     }
+    printf("\n"); // Quebra de linha após a impressão da lista
 }
 
 void liberarInt(No* lista){
@@ -50,15 +51,15 @@ No* buscarInt(int numero, No* lista){
 }
 
 No* removerInt(No* lista, int numero){
-    No* ant; // Guardar o elemento anterior
+    No* ant = NULL; // Guardar o elemento anterior
     No* index = lista; // Contador para percorrer a lista
     // Buscando o elemento a ser removido
-    while(index->info != NULL){
-        if(index == NULL){
-            return lista;
-        }
+    while(index != NULL && index->info != numero){
         ant = index;
         index = index->prox;
+    }
+    if(index == NULL){ // Se o número não for encontrado
+        return lista;
     }
     // O elemento é o primeiro da lista
     if(ant == NULL){
@@ -69,6 +70,6 @@ No* removerInt(No* lista, int numero){
         ant->prox = index->prox;
     }
 
-    free(index)
+    free(index);
     return lista;
 }
