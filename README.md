@@ -45,6 +45,8 @@ Este repositório está organizado por Unidades de Estudo, cada uma cobrindo dif
 - Vantagens das Enumerações
 - Enumerações e Switch-case
 
+---
+
 ### 🔹 Unidade II
 
 #### 🛠️ 2.1 Tipos Abstratos de Dados (TADs)
