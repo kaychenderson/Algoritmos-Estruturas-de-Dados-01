@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "lista.h"
-#define pi 3.14159265358979323846
+#include "listahet.h"
 
-Lista* cria_ret(float b, float h) {
+ListaHet* cria_ret(float b, float h) {
     Retangulo* r = (Retangulo*) malloc(sizeof(Retangulo));
     r->base = b;
     r->altura = h;
     
-    Lista* novo = (Lista*) malloc(sizeof(Lista));
+    ListaHet* novo = (ListaHet*) malloc(sizeof(ListaHet));
     novo->tipo = RETANGULO;
     novo->figura = r;
     novo->prox = NULL;
@@ -17,12 +16,12 @@ Lista* cria_ret(float b, float h) {
     return novo;
 }
 
-Lista* cria_tri(float b, float h) {
+ListaHet* cria_tri(float b, float h) {
     Triangulo* t = (Triangulo*) malloc(sizeof(Triangulo));
     t->base = b;
     t->altura = h;
     
-    Lista* novo = (Lista*) malloc(sizeof(Lista));
+    ListaHet* novo = (ListaHet*) malloc(sizeof(ListaHet));
     novo->tipo = TRIANGULO;
     novo->figura = t;
     novo->prox = NULL;
@@ -30,11 +29,11 @@ Lista* cria_tri(float b, float h) {
     return novo;
 }
 
-Lista* cria_circ(float r) {
+ListaHet* cria_circ(float r) {
     Circulo* c = (Circulo*) malloc(sizeof(Circulo));
     c->raio = r;
     
-    Lista* novo = (Lista*) malloc(sizeof(Lista));
+    ListaHet* novo = (ListaHet*) malloc(sizeof(ListaHet));
     novo->tipo = CIRCULO;
     novo->figura = c;
     novo->prox = NULL;
@@ -42,19 +41,19 @@ Lista* cria_circ(float r) {
     return novo;
 }
 
-float ret_area(Retangulo* r) {
+static float ret_area(Retangulo* r) {
     return r->base * r->altura;
 }
 
-float tri_area(Triangulo* t) {
+static float tri_area(Triangulo* t) {
     return (t->base * t->altura) / 2;
 }
 
-float circ_area(Circulo* c) {
-    return pi * pow(c->raio, 2);
+static float circ_area(Circulo* c) {
+    return M_PI * pow(c->raio, 2);
 }
 
-float area(Lista* p) {
+static float area(ListaHet* p) {
     switch (p->tipo) {
         case RETANGULO:
             return ret_area((Retangulo*) p->figura);
@@ -67,7 +66,7 @@ float area(Lista* p) {
     }
 }
 
-float max_area(Lista* l) {
+float max_area(ListaHet* l) {
     float max = 0.0;
     while (l != NULL) {
         float a = area(l);

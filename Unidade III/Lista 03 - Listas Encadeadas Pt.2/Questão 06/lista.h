@@ -1,5 +1,6 @@
-#ifndef LISTA_H
-#define LISTA_H
+// listahet.h
+#ifndef LISTAHET_H
+#define LISTAHET_H
 
 typedef enum { 
     RETANGULO, 
@@ -21,22 +22,22 @@ typedef struct {
     float raio;
 } Circulo;
 
-typedef struct lista {
+typedef struct listahet {
     TipoFigura tipo;
     void* figura;
-    struct lista* prox;
-} Lista;
+    struct listahet* prox;
+} ListaHet;
 
-Lista* cria_ret(float b, float h);
-Lista* cria_tri(float b, float h);
-Lista* cria_circ(float r);
+ListaHet* cria_ret(float b, float h);
+ListaHet* cria_tri(float b, float h);
+ListaHet* cria_circ(float r);
 
-float ret_area(Retangulo* r);
-float tri_area(Triangulo* t);
-float circ_area(Circulo* c);
+static float ret_area(Retangulo* r);
+static float tri_area(Triangulo* t);
+static float circ_area(Circulo* c);
 
-float area(Lista* p);
+static float area(ListaHet* p);
 
-float max_area(Lista* l);
+float max_area(ListaHet* l);
 
 #endif
