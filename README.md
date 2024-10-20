@@ -68,6 +68,20 @@ Este repositório está organizado por Unidades de Estudo, cada uma cobrindo dif
 - Complexidade de Tempo e Espaço
 - Casos: Pior, Médio e Melhor
 
+#### 2.4 📊 Algoritmos de Ordenação
+- Quick Sort
+- Bubble Sort
+- Gnome Sort
+- Jump Sort
+- Insertion Sort
+- Merge Sort
+- Shell Sort
+
+#### 2.5 🔍 Algoritmos de Busca
+- Busca Linear (Sequencial)
+- Busca Binária
+- Busca Exponencial
+
 ---
 
 ### 🔹 Unidade III
