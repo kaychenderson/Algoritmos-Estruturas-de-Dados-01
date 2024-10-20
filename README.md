@@ -24,7 +24,7 @@ Este repositório está organizado por Unidades de Estudo, cada uma cobrindo dif
 - Gerenciamento de Memória Dinâmica
 - Aplicações de Memória Dinâmica
 
-#### 🧩 1.3 Tipos Estruturados
+#### 1.3 🧩 Tipos Estruturados
 - Introdução aos Tipos Estruturados
 - Definição e Declaração de Estruturas
 - Acesso a Membros de Estruturas
@@ -32,36 +32,34 @@ Este repositório está organizado por Unidades de Estudo, cada uma cobrindo dif
 - Arrays de Estruturas
 - Ponteiros para Estruturas
 
-#### ⚖️ 1.4 Union
+#### 1.4 ⚖️ Union
 - Introdução às Unions
 - Definição e Declaração de Uniões
 - Diferenças entre Estruturas e Uniões
 - Aplicações de Uniões
 
-#### 🔄 1.5 Enum
+#### 1.5 🔄 Enum
 - Introdução às Enums
 - Definição e Declaração de Enumerações
 - Uso de Enumerações
 - Vantagens das Enumerações
 - Enumerações e Switch-case
 
----
-
 ### 🔹 Unidade II
 
-#### 🛠️ 2.1 Tipos Abstratos de Dados (TADs)
+#### 2.1 🛠️ Tipos Abstratos de Dados (TADs)
 - Introdução aos TADs
 - Implementação de TADs
 - Pilhas, Filas e Listas
 - Operações com TADs
 
-#### 📂 2.2 Arquivos
+#### 2.2 📂 Arquivos
 - Manipulação de Arquivos em C
 - Leitura e Escrita de Arquivos
 - Organização de Arquivos
 - Aplicações de Arquivos
 
-#### 🧮 2.3 Complexidade de Algoritmos
+#### 2.3 🧮 Complexidade de Algoritmos
 - Introdução à Complexidade de Algoritmos
 - Notação Big-O
 - Análise de Complexidade de Algoritmos
@@ -72,19 +70,19 @@ Este repositório está organizado por Unidades de Estudo, cada uma cobrindo dif
 
 ### 🔹 Unidade III
 
-#### 📜 3.1 Listas Encadeadas
+#### 3.1 📜 Listas Encadeadas
 - Introdução às Listas Encadeadas
 - Listas Simplesmente Encadeadas
 - Listas Duplamente Encadeadas
 - Listas Circulares
 
-#### 📦 3.2 Pilhas
+#### 3.2 📦 Pilhas
 - Introdução às Pilhas
 - Implementação de Pilhas com Vetores
 - Implementação de Pilhas com Listas Encadeadas
 - Aplicações de Pilhas
 
-#### 📅 3.3 Filas
+#### 3.3 📅 Filas
 - Introdução às Filas
 - Implementação de Filas com Vetores
 - Implementação de Filas com Listas Encadeadas
