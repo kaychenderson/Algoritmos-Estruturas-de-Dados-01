@@ -1,4 +1,3 @@
-// main.c
 #include <stdio.h>
 #include "listahet.h"
 
